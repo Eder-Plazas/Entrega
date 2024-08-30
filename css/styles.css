@@ -2,17 +2,75 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: cornflowerblue;
 }
 
 .container{
     width: 100%;
     height: 100vh;
-    background-color: rebeccapurple;
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "informacion foto gustos"
+    "informacion foto gustos"
+    "informacion foto gustos"
+    "informacion foto gustos"
+    "informacion foto gustos"
+    "informacion foto gustos"
+    "pie pie pie"
+    "pie pie pie"
+    "pie pie pie";
 }
 
 #cabeza{
-    display: flex;
-    align-content: space-around;
-    height: 125px;
+    border: 1px solid black;
+    font-size: 2.1rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); 
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    grid-area: cabeza;
+}
+
+section{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#informacion{
+    grid-area: informacion;
+}
+
+#foto{
+    grid-area: foto;
+}
+
+#gustos{
+    grid-area: gustos;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer{
+    border: 1px solid black;
+    grid-area: pie;
+    border-radius: 10px;
+}
+
+ul.grid-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+ul.grid-list li {
+    background-image: url("../img/fondo_lista.jpg");
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
