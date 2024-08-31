@@ -7,7 +7,6 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-color: cornflowerblue;
     display: grid;
     grid-template-areas: 
     "cabeza cabeza cabeza"
@@ -19,6 +18,7 @@
 
 #cabeza{
     border: 1px solid black;
+    background-color: aquamarine;
     font-size: 2.1rem;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); 
     text-align: center;
@@ -30,7 +30,7 @@
 }
 
 section{
-    
+    background-color: brown;
     border-radius: 10px;
 }
 
@@ -38,12 +38,19 @@ section{
     grid-area: informacion;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: chartreuse;
 }
 
-#foto{
+#foto {
     grid-area: foto;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-sizing: border-box; 
+    background-color: chocolate;
 }
+
 
 #gustos{
     grid-area: gustos;
@@ -57,9 +64,20 @@ section{
 }
 
 footer{
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #4b0082;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border: 1px solid black;
     grid-area: pie;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
     border-radius: 10px;
+    background-color: crimson;
 }
 
 ul.grid-list {
@@ -84,4 +102,100 @@ ul.grid-list li {
     text-align: center;
     font-size: 25px;
 }
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-areas:
+        "cabeza"
+        "foto"
+        "informacion"
+        "gustos"
+        "pie";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    #cabeza {
+        font-size: 1.5rem;
+    }
+
+    #gustos {
+        font-size: 1.5rem;
+    }
+
+    ul.grid-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .container {
+        grid-template-areas:
+        "cabeza cabeza"
+        "foto foto"
+        "informacion gustos"
+        "pie pie";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #cabeza {
+        font-size: 2rem;
+    }
+
+    #gustos {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-areas:
+        "cabeza cabeza cabeza"
+        "informacion foto gustos"
+        "pie pie pie";
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+article{
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #4b0082;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.lugares {
+    font-size: 25px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.lugares li {
+    flex: 1;
+    text-align: center;
+    background-image: url("../img/fondo_lista.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border-radius: 5%;
+    border: 3px solid #ddd;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
 
