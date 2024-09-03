@@ -16,6 +16,23 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.container2{
+    background-color: #12081a98;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "libro_1 libro_2 libro_3"
+    "libro_4 libro_5 libro_6"
+    "libro_7 libro_8 libro_9";
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+}
+
+.contenido_libros{
+    border: solid black;
+}
+
 #cabeza{
     border: 1px solid black;
     background-color: aquamarine;
@@ -187,6 +204,7 @@ p{
 .lugares li {
     flex: 1;
     text-align: center;
+    color: springgreen;
     background-image: url("../img/fondo_lista.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -198,4 +216,30 @@ p{
     font-size: 25px;
 }
 
-
+#libro_1{
+    grid-area: libro_1;
+}
+#libro_2{
+    grid-area: libro_2;
+}
+#libro_3{
+    grid-area: libro_3;
+}
+#libro_4{
+    grid-area: libro_4;
+}
+#libro_5{
+    grid-area: libro_5;
+}
+#libro_6{
+    grid-area: libro_6;
+}
+#libro_7{
+    grid-area: libro_7;
+}
+#libro_8{
+    grid-area: libro_8;
+}
+#libro_9{
+    grid-area: libro_9;
+}
