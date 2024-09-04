@@ -17,20 +17,20 @@
 }
 
 .container2{
-    background-color: #12081a98;
+    background-color: rgb(23, 155, 174);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-areas: 
     "cabeza cabeza cabeza"
     "libro_1 libro_2 libro_3"
     "libro_4 libro_5 libro_6"
     "libro_7 libro_8 libro_9";
-    grid-template-rows: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
 }
 
 .contenido_libros{
-    border: solid black;
+    border: 2px solid black;
 }
 
 #cabeza{
@@ -48,13 +48,11 @@
 
 section{
     background-color: brown;
-    border-radius: 10px;
 }
 
 #informacion{
     grid-area: informacion;
     border: 1px solid black;
-    border-radius: 10px;
     background-color: rgb(37, 128, 240);
     color: white;
 }
@@ -111,10 +109,9 @@ ul.grid-list {
 }
 
 ul.grid-list li {
-    background-image: url("../img/fondo_lista.jpg");
     padding: 10px;
     border-radius: 10%;
-    border: 5px solid #ddd;
+    border: 1px solid black;
     text-align: center;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
@@ -219,30 +216,39 @@ p{
 
 #libro_1{
     grid-area: libro_1;
+    text-align: center;
 }
 #libro_2{
     grid-area: libro_2;
+    text-align: center;
 }
 #libro_3{
     grid-area: libro_3;
+    text-align: center;
 }
 #libro_4{
     grid-area: libro_4;
+    text-align: center;
 }
 #libro_5{
     grid-area: libro_5;
+    text-align: center;
 }
 #libro_6{
     grid-area: libro_6;
+    text-align: center;
 }
 #libro_7{
     grid-area: libro_7;
+    text-align: center;
 }
 #libro_8{
     grid-area: libro_8;
+    text-align: center;
 }
 #libro_9{
     grid-area: libro_9;
+    text-align: center;
 }
 
 .l1{
@@ -262,11 +268,19 @@ p{
 }
 
 .l3{
-    background-color: springgreen;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .l4{
-    background-color: royalblue;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .lu1 {
@@ -349,6 +363,24 @@ img {
         width: 100%;
         height: auto; 
     }
+}
+
+#libros{
+    background-image: url("../img/libros.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 100%;
+}
+
+#comida{
+    background-image: url("../img/comida.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 100%;
 }
 
 
